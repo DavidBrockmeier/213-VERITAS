@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- 13-star seal — Betsy Ross arrangement -->
+  <!-- Outer circle -->
+  <circle cx="100" cy="100" r="90" stroke="#1B2A4A" stroke-width="1.2" fill="none"/>
+  <circle cx="100" cy="100" r="86" stroke="#1B2A4A" stroke-width="0.4" fill="none"/>
+
+  <!-- 13 stars arranged in a circle, radius 62 from center -->
+  <!-- Each star is a small 5-pointed star, rotated to position -->
+  <!-- Star positions: 13 points evenly spaced at 360/13 ≈ 27.69° apart, starting from top -->
+  <g fill="#1B2A4A">
+    <!-- Star function: 5-pointed star centered at (cx,cy) with outer radius 6 -->
+    <!-- Position 1: top (270°) -->
+    <polygon points="100,38 102.3,44.1 108.7,44.1 103.5,47.9 105.5,54.1 100,50.5 94.5,54.1 96.5,47.9 91.3,44.1 97.7,44.1"/>
+    <!-- Position 2: 297.7° -->
+    <polygon points="129.5,42.3 129.1,48.8 135,50.8 128.9,53 128.5,59.5 124.3,54.7 118.2,56.7 121.6,51.2 117.4,46.4 123.8,47.2" />
+    <!-- Position 3: 325.4° -->
+    <polygon points="153.3,58.5 150.6,64.3 155.2,68.8 148.8,69.1 146.1,74.9 143.8,69 137.4,68.3 142.4,64.2 140.1,58.4 146,61.1"/>
+    <!-- Position 4: 353.1° -->
+    <polygon points="166.5,83 162,87.8 164.8,93.6 158.5,92 154.1,96.9 153.7,90.4 147.5,88.5 153,85 152.6,78.5 157.7,82.5"/>
+    <!-- Position 5: 20.8° -->
+    <polygon points="167,112 161.2,114.5 161.5,121 156.7,116.9 150.9,119.3 153.1,113.3 148.3,109.1 154.8,108.8 157,102.8 159.2,108.9"/>
+    <!-- Position 6: 48.5° -->
+    <polygon points="155,138 148.8,138.3 147,144.5 143.5,139.2 137.3,139.5 141.2,135 138.8,129 144.5,131.5 148.4,127 148.7,133.2"/>
+    <!-- Position 7: 76.2° -->
+    <polygon points="132,157 126.2,155 122.4,159.8 121.8,153.3 116,151.3 121.6,148 121,141.5 125.6,145.5 131.2,142.2 128.8,148.3"/>
+    <!-- Position 8: 103.8° -->
+    <polygon points="100,162 95.5,157.2 89.2,159 91.2,153 86.7,148.2 93.1,148.5 95.1,142.5 97.7,148.2 104.1,148.5 99.1,152"/>
+    <!-- Position 9: 131.5° -->
+    <polygon points="68,157 65.6,148.3 60.4,142.2 65.5,145.5 70.1,141.5 69.5,148 75.1,151.3 69.3,153.3 68.7,159.8 64.9,155"/>
+    <!-- Position 10: 159.2° -->
+    <polygon points="45,138 45.3,133.2 42.9,127 47.6,131.5 53.3,129 50.9,135 54.8,139.5 48.6,139.2 45.1,144.5 43.3,138.3"/>
+    <!-- Position 11: 186.9° -->
+    <polygon points="33,112 35.2,108.9 37.4,102.8 39.6,108.8 46.1,109.1 41.3,113.3 43.5,119.3 37.7,116.9 32.9,121 33.2,114.5"/>
+    <!-- Position 12: 214.6° -->
+    <polygon points="33.5,83 38.6,82.5 41.8,78.5 41.4,85 46.9,88.5 40.7,90.4 40.3,96.9 35.9,92 29.6,93.6 32.4,87.8"/>
+    <!-- Position 13: 242.3° -->
+    <polygon points="46.7,58.5 52.6,61.1 58.5,58.4 56.2,64.2 61.2,68.3 54.8,69 52.1,74.9 49.4,69.1 43,68.8 47.6,64.3"/>
+  </g>
+
+  <!-- Center dot -->
+  <circle cx="100" cy="100" r="2" fill="#CC2936"/>
+
+  <!-- VERITAS arc text -->
+  <path id="veritas-arc" d="M 45,140 A 70,70 0 0,1 155,140" fill="none" stroke="none"/>
+  <text font-family="'Playfair Display', Georgia, serif" font-size="11" font-weight="600" fill="#1B2A4A" letter-spacing="4">
+    <textPath href="#veritas-arc" startOffset="50%" text-anchor="middle">VERITAS</textPath>
+  </text>
+
+  <!-- EST. 1996 arc text (bottom) -->
+  <path id="est-arc" d="M 55,155 A 60,60 0 0,0 145,155" fill="none" stroke="none"/>
+  <text font-family="'DM Sans', sans-serif" font-size="8" font-weight="500" fill="#1B2A4A" letter-spacing="2">
+    <textPath href="#est-arc" startOffset="50%" text-anchor="middle">EST. 1996</textPath>
+  </text>
+</svg>

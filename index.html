@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>213 Veritas — Design Comp</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --navy: #1B2A4A; --navy-deep: #0F1B33; --scarlet: #CC2936;
+  --white: #FFFFFF; --bg: #FAFBFD; --bg-card: #F4F6F9;
+  --border: #E0E4EA; --border-light: #ECEEF2;
+  --text: #000000; --text-muted: #555555; --text-hint: #999999;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: 'DM Sans', -apple-system, sans-serif;
+}
+html { font-family: var(--font-sans); font-size: 16px; line-height: 1.6; color: var(--text); background: #E8EAEE; -webkit-font-smoothing: antialiased; }
+.page { max-width: 960px; margin: 0 auto; }
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 20px 40px; border-bottom: 1px solid var(--border-light); background: var(--white); }
+.nav-brand { display: flex; align-items: center; gap: 12px; }
+.nav-wordmark { font-family: var(--font-serif); font-size: 22px; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a { font-family: var(--font-sans); font-size: 13px; font-weight: 500; color: var(--navy); text-decoration: none; }
+.nav-links a:hover { color: var(--scarlet); }
+.hero { padding: 72px 40px 56px; max-width: 600px; }
+.hero-eyebrow { font-family: var(--font-sans); font-size: 11px; font-weight: 600; color: var(--scarlet); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 16px; }
+.hero h1 { font-family: var(--font-serif); font-size: 42px; font-weight: 600; color: var(--navy); letter-spacing: -0.025em; line-height: 1.1; margin-bottom: 20px; }
+.hero p { font-size: 16px; color: var(--text); line-height: 1.7; margin-bottom: 32px; }
+.btn-row { display: flex; gap: 12px; }
+.btn-primary { background: var(--navy); color: var(--white); font-family: var(--font-sans); font-size: 14px; font-weight: 500; padding: 13px 30px; border-radius: 6px; border: none; cursor: pointer; }
+.btn-primary:hover { background: var(--navy-deep); }
+.btn-secondary { background: transparent; color: var(--navy); font-family: var(--font-sans); font-size: 14px; font-weight: 500; padding: 13px 30px; border-radius: 6px; border: 1.5px solid var(--navy); cursor: pointer; }
+.btn-secondary:hover { background: var(--navy); color: var(--white); }
+.stats { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; padding: 0 40px; margin-bottom: 64px; }
+.stat-card { background: var(--bg-card); border-radius: 10px; padding: 24px; border-left: 3px solid var(--navy); }
+.stat-card:first-child { border-left-color: var(--scarlet); }
+.stat-card:hover { border-left-color: var(--scarlet); }
+.stat-num { font-family: var(--font-serif); font-size: 32px; font-weight: 600; color: var(--navy); line-height: 1; margin-bottom: 6px; }
+.stat-label { font-size: 13px; color: var(--text-muted); }
+.services { padding: 0 40px; margin-bottom: 64px; }
+.section-eyebrow { font-family: var(--font-sans); font-size: 11px; font-weight: 600; color: var(--scarlet); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 12px; }
+.section-heading { font-family: var(--font-serif); font-size: 30px; font-weight: 600; color: var(--navy); letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 32px; }
+.service-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.service-card { background: var(--white); border: 1px solid var(--border); border-radius: 10px; padding: 28px; }
+.service-card:hover { border-color: var(--navy); box-shadow: 0 2px 12px rgba(27,42,74,0.06); }
+.service-card h3 { font-family: var(--font-serif); font-size: 19px; font-weight: 600; color: var(--navy); margin-bottom: 8px; }
+.service-card p { font-size: 14px; color: var(--text); line-height: 1.65; }
+.promise { padding: 0 40px; margin-bottom: 48px; }
+.promise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 32px; }
+.promise-item { display: flex; align-items: flex-start; gap: 14px; padding: 18px 0; }
+.promise-check { width: 22px; height: 22px; min-width: 22px; border-radius: 50%; background: var(--navy); display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+.promise-text { font-size: 14px; color: var(--text); line-height: 1.55; }
+.promise-text strong { color: var(--navy); font-weight: 600; }
+.footer { background: var(--bg); padding: 28px 40px 32px; text-align: center; }
+.footer-brand { font-family: var(--font-serif); font-weight: 600; font-size: 13px; color: var(--navy); margin-bottom: 4px; }
+.footer-copy { font-size: 12px; color: var(--text-hint); margin-bottom: 8px; }
+.footer-links { display: flex; gap: 20px; justify-content: center; }
+.footer-links a { font-size: 12px; color: var(--text-muted); text-decoration: none; }
+.footer-links a:hover { color: var(--scarlet); }
+</style>
+</head>
+<body>
+
+<div class="page" style="background: var(--white); border-radius: 12px; overflow: hidden; margin: 32px auto 48px; box-shadow: 0 1px 4px rgba(0,0,0,0.06);">
+
+  <nav class="nav">
+    <div class="nav-brand"><span class="nav-wordmark">213 Veritas</span></div>
+    <ul class="nav-links">
+      <li><a href="#">Services</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <p class="hero-eyebrow">Managed IT for professionals</p>
+    <h1>Technology should serve your practice, not distract from it.</h1>
+    <p>White-glove IT management for law firms, medical practices, and high-net-worth residences. No contracts. No hidden fees. No excuses.</p>
+    <div class="btn-row">
+      <button class="btn-primary">Schedule a consultation</button>
+      <button class="btn-secondary">View services</button>
+    </div>
+  </div>
+
+  <div class="stats">
+    <div class="stat-card"><p class="stat-num">47</p><p class="stat-label">Jobs completed</p></div>
+    <div class="stat-card"><p class="stat-num">0</p><p class="stat-label">Free visits</p></div>
+    <div class="stat-card"><p class="stat-num">10 min</p><p class="stat-label">Premium callback guarantee</p></div>
+  </div>
+
+  <div class="services">
+    <p class="section-eyebrow">Who we serve</p>
+    <h2 class="section-heading">Built for practices that can't afford downtime.</h2>
+    <div class="service-grid">
+      <div class="service-card"><h3>Law Firms</h3><p>Your client data is sacred. We treat it that way — encrypted, audited, documented. Full compliance support for your ethical obligations.</p></div>
+      <div class="service-card"><h3>Medical Practices</h3><p>HIPAA isn't a checkbox — it's how we build everything. Your patients' data stays protected because your infrastructure demands it.</p></div>
+      <div class="service-card"><h3>High-Net-Worth Residences</h3><p>Gate automation, network security, whole-home integration. Your home technology should work invisibly and flawlessly.</p></div>
+      <div class="service-card"><h3>AI Consulting</h3><p>AI is transforming every practice. We help you adopt it safely, practically, and in compliance with your industry's standards.</p></div>
+    </div>
+  </div>
+
+  <div class="promise">
+    <p class="section-eyebrow">Our commitments</p>
+    <h2 class="section-heading">What we guarantee, in writing.</h2>
+    <div class="promise-grid">
+      <div class="promise-item"><div class="promise-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="promise-text"><strong>No contracts.</strong> Month-to-month. We earn your business every month or you walk.</p></div>
+      <div class="promise-item"><div class="promise-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="promise-text"><strong>No hardware markup.</strong> Ever. You pay cost. We make our money on service.</p></div>
+      <div class="promise-item"><div class="promise-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="promise-text"><strong>Break-glass credentials.</strong> Your admin passwords are always yours. We never hold your data hostage.</p></div>
+      <div class="promise-item"><div class="promise-check"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><p class="promise-text"><strong>Full data handover.</strong> If you leave, everything comes with you. Documentation, credentials, configurations.</p></div>
+    </div>
+  </div>
+
+  <!-- The Ribbon — illustrator-traced style with fold gradients -->
+  <div style="line-height: 0; overflow: hidden;">
+    <svg width="100%" height="72" viewBox="0 0 960 72" preserveAspectRatio="none">
+      <defs>
+        <!-- Fold gradients — each simulates light hitting one section of draped fabric -->
+        <!-- Fold 1: entering from left, rising to first crest -->
+        <linearGradient id="fold1" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#E8444F"/>
+          <stop offset="40%" stop-color="#CC2936"/>
+          <stop offset="100%" stop-color="#8B1A22"/>
+        </linearGradient>
+        <!-- Fold 2: first valley — deep shadow -->
+        <linearGradient id="fold2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#9E1E28"/>
+          <stop offset="50%" stop-color="#7A151D"/>
+          <stop offset="100%" stop-color="#9E1E28"/>
+        </linearGradient>
+        <!-- Fold 3: second crest — bright, catching light -->
+        <linearGradient id="fold3" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F05060"/>
+          <stop offset="30%" stop-color="#E03E48"/>
+          <stop offset="70%" stop-color="#CC2936"/>
+          <stop offset="100%" stop-color="#A02030"/>
+        </linearGradient>
+        <!-- Fold 4: second valley -->
+        <linearGradient id="fold4" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#A52030"/>
+          <stop offset="50%" stop-color="#801820"/>
+          <stop offset="100%" stop-color="#A02028"/>
+        </linearGradient>
+        <!-- Fold 5: third crest — brightest highlight -->
+        <linearGradient id="fold5" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#F46070"/>
+          <stop offset="25%" stop-color="#E84450"/>
+          <stop offset="60%" stop-color="#D43040"/>
+          <stop offset="100%" stop-color="#B02530"/>
+        </linearGradient>
+        <!-- Fold 6: third valley, trailing -->
+        <linearGradient id="fold6" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#A82030"/>
+          <stop offset="50%" stop-color="#7D1620"/>
+          <stop offset="100%" stop-color="#992028"/>
+        </linearGradient>
+        <!-- Fold 7: exit crest -->
+        <linearGradient id="fold7" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#E84450"/>
+          <stop offset="50%" stop-color="#D03038"/>
+          <stop offset="100%" stop-color="#A82530"/>
+        </linearGradient>
+      </defs>
+
+      <!--
+        Ribbon built from segmented fold panels.
+        Each panel is a vertical slice whose top and bottom edges
+        follow the wave contour, filled with a gradient that
+        simulates light (crest) or shadow (valley).
+      -->
+
+      <!-- Fold 1: x 0–140, rising from left -->
+      <path d="
+        M 0 48
+        C 30 46, 60 38, 90 30
+        C 110 24, 130 20, 140 18
+        L 140 30
+        C 130 32, 110 36, 90 42
+        C 60 50, 30 56, 0 58
+        Z
+      " fill="url(#fold1)"/>
+
+      <!-- Fold 2: x 140–260, valley -->
+      <path d="
+        M 140 18
+        C 160 15, 180 16, 200 22
+        C 220 28, 240 36, 260 42
+        L 260 54
+        C 240 48, 220 40, 200 34
+        C 180 28, 160 27, 140 30
+        Z
+      " fill="url(#fold2)"/>
+
+      <!-- Fold 3: x 260–400, second crest -->
+      <path d="
+        M 260 42
+        C 280 46, 310 48, 330 44
+        C 350 40, 370 30, 390 22
+        C 395 20, 400 18, 400 17
+        L 400 29
+        C 395 30, 390 34, 370 42
+        C 350 52, 330 56, 310 58
+        C 290 58, 270 56, 260 54
+        Z
+      " fill="url(#fold3)"/>
+
+      <!-- Fold 4: x 400–520, second valley -->
+      <path d="
+        M 400 17
+        C 420 14, 440 16, 460 22
+        C 480 28, 500 38, 520 44
+        L 520 56
+        C 500 50, 480 40, 460 34
+        C 440 28, 420 26, 400 29
+        Z
+      " fill="url(#fold4)"/>
+
+      <!-- Fold 5: x 520–660, third crest — brightest -->
+      <path d="
+        M 520 44
+        C 540 48, 560 48, 580 44
+        C 600 38, 620 28, 640 20
+        C 650 16, 660 14, 660 13
+        L 660 25
+        C 650 28, 640 32, 620 40
+        C 600 50, 580 56, 560 58
+        C 540 60, 525 58, 520 56
+        Z
+      " fill="url(#fold5)"/>
+
+      <!-- Fold 6: x 660–780, third valley -->
+      <path d="
+        M 660 13
+        C 680 10, 700 12, 720 18
+        C 740 24, 760 34, 780 40
+        L 780 52
+        C 760 46, 740 36, 720 30
+        C 700 24, 680 22, 660 25
+        Z
+      " fill="url(#fold6)"/>
+
+      <!-- Fold 7: x 780–960, exit crest trailing off -->
+      <path d="
+        M 780 40
+        C 800 44, 830 44, 860 40
+        C 890 36, 920 30, 950 26
+        C 958 25, 960 24, 960 24
+        L 960 36
+        C 958 36, 950 38, 920 42
+        C 890 48, 860 52, 830 54
+        C 810 56, 790 54, 780 52
+        Z
+      " fill="url(#fold7)"/>
+
+      <!-- Specular highlight — thin bright line along the wave crests -->
+      <path d="
+        M 0 48
+        C 30 46, 60 38, 90 30
+        C 110 24, 130 20, 140 18
+        C 160 15, 180 16, 200 22
+        C 220 28, 240 36, 260 42
+        C 280 46, 310 48, 330 44
+        C 350 40, 370 30, 390 22
+        C 400 18, 420 14, 440 16
+        C 460 22, 480 28, 500 38
+        C 520 44, 540 48, 560 48
+        C 580 44, 600 38, 620 28
+        C 640 20, 660 14, 680 10
+        C 700 12, 720 18, 740 24
+        C 760 34, 780 40, 800 44
+        C 830 44, 860 40, 890 36
+        C 920 30, 950 26, 960 24
+      " fill="none" stroke="rgba(255,180,180,0.3)" stroke-width="1.2"/>
+
+      <!-- Deep shadow line along bottom edge of folds -->
+      <path d="
+        M 0 58
+        C 30 56, 60 50, 90 42
+        C 110 36, 130 32, 140 30
+        C 160 27, 180 28, 200 34
+        C 220 40, 240 48, 260 54
+        C 270 56, 290 58, 310 58
+        C 330 56, 350 52, 370 42
+        C 390 34, 395 30, 400 29
+        C 420 26, 440 28, 460 34
+        C 480 40, 500 50, 520 56
+        C 525 58, 540 60, 560 58
+        C 580 56, 600 50, 620 40
+        C 640 32, 650 28, 660 25
+        C 680 22, 700 24, 720 30
+        C 740 36, 760 46, 780 52
+        C 790 54, 810 56, 830 54
+        C 860 52, 890 48, 920 42
+        C 950 38, 958 36, 960 36
+      " fill="none" stroke="rgba(80,10,15,0.25)" stroke-width="0.8"/>
+
+    </svg>
+  </div>
+
+  <footer class="footer">
+    <p class="footer-brand">213 Veritas</p>
+    <p class="footer-copy">© 2026 213 Veritas LLC — Woman-owned. Minority-owned.</p>
+    <div class="footer-links">
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">Contact</a>
+    </div>
+  </footer>
+
+</div>
+
+</body>
+</html>

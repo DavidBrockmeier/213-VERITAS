@@ -1,0 +1,61 @@
+:root {
+  /* ————— Colors ————— */
+  --v-navy:          #1B2A4A;
+  --v-navy-deep:     #0F1B33;
+  --v-navy-light:    #2C3E66;
+  --v-scarlet:       #CC2936;
+  --v-scarlet-light: #E8444F;
+  --v-scarlet-dark:  #A11F2B;
+  --v-white:         #FFFFFF;
+  --v-bg:            #FAFBFD;
+  --v-surface:       #F4F6F9;
+  --v-border:        #E0E4EA;
+  --v-border-light:  #ECEEF2;
+  --v-text:          #000000;
+  --v-text-muted:    #555555;
+  --v-text-hint:     #999999;
+
+  /* ————— Typography ————— */
+  --v-font-serif: 'Playfair Display', Georgia, serif;
+  --v-font-sans:  'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* ————— Type Scale ————— */
+  --v-text-hero:     42px;
+  --v-text-section:  30px;
+  --v-text-card:     19px;
+  --v-text-body:     16px;
+  --v-text-small:    14px;
+  --v-text-label:    13px;
+  --v-text-eyebrow:  11px;
+
+  /* ————— Font Weights ————— */
+  --v-weight-normal:  400;
+  --v-weight-medium:  500;
+  --v-weight-semi:    600;
+  --v-weight-bold:    700;
+
+  /* ————— Spacing ————— */
+  --v-space-xs:  4px;
+  --v-space-sm:  8px;
+  --v-space-md:  16px;
+  --v-space-lg:  24px;
+  --v-space-xl:  32px;
+  --v-space-2xl: 48px;
+  --v-space-3xl: 64px;
+  --v-space-4xl: 80px;
+
+  /* ————— Radii ————— */
+  --v-radius-sm:  6px;
+  --v-radius-md:  10px;
+  --v-radius-lg:  12px;
+  --v-radius-xl:  16px;
+
+  /* ————— Borders ————— */
+  --v-border-width:      1px;
+  --v-border-width-thick: 1.5px;
+  --v-stat-accent-width: 3px;
+
+  /* ————— Transitions ————— */
+  --v-transition-fast: 0.2s ease;
+  --v-transition-med:  0.25s ease;
+}

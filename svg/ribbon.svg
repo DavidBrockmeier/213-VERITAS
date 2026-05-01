@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 72" preserveAspectRatio="none" fill="none">
+  <defs>
+    <linearGradient id="fold1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8444F"/>
+      <stop offset="40%" stop-color="#CC2936"/>
+      <stop offset="100%" stop-color="#8B1A22"/>
+    </linearGradient>
+    <linearGradient id="fold2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#9E1E28"/>
+      <stop offset="50%" stop-color="#7A151D"/>
+      <stop offset="100%" stop-color="#9E1E28"/>
+    </linearGradient>
+    <linearGradient id="fold3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F05060"/>
+      <stop offset="30%" stop-color="#E03E48"/>
+      <stop offset="70%" stop-color="#CC2936"/>
+      <stop offset="100%" stop-color="#A02030"/>
+    </linearGradient>
+    <linearGradient id="fold4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A52030"/>
+      <stop offset="50%" stop-color="#801820"/>
+      <stop offset="100%" stop-color="#A02028"/>
+    </linearGradient>
+    <linearGradient id="fold5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F46070"/>
+      <stop offset="25%" stop-color="#E84450"/>
+      <stop offset="60%" stop-color="#D43040"/>
+      <stop offset="100%" stop-color="#B02530"/>
+    </linearGradient>
+    <linearGradient id="fold6" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#A82030"/>
+      <stop offset="50%" stop-color="#7D1620"/>
+      <stop offset="100%" stop-color="#992028"/>
+    </linearGradient>
+    <linearGradient id="fold7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E84450"/>
+      <stop offset="50%" stop-color="#D03038"/>
+      <stop offset="100%" stop-color="#A82530"/>
+    </linearGradient>
+  </defs>
+  <path d="M 0 48 C 30 46, 60 38, 90 30 C 110 24, 130 20, 140 18 L 140 30 C 130 32, 110 36, 90 42 C 60 50, 30 56, 0 58 Z" fill="url(#fold1)"/>
+  <path d="M 140 18 C 160 15, 180 16, 200 22 C 220 28, 240 36, 260 42 L 260 54 C 240 48, 220 40, 200 34 C 180 28, 160 27, 140 30 Z" fill="url(#fold2)"/>
+  <path d="M 260 42 C 280 46, 310 48, 330 44 C 350 40, 370 30, 390 22 C 395 20, 400 18, 400 17 L 400 29 C 395 30, 390 34, 370 42 C 350 52, 330 56, 310 58 C 290 58, 270 56, 260 54 Z" fill="url(#fold3)"/>
+  <path d="M 400 17 C 420 14, 440 16, 460 22 C 480 28, 500 38, 520 44 L 520 56 C 500 50, 480 40, 460 34 C 440 28, 420 26, 400 29 Z" fill="url(#fold4)"/>
+  <path d="M 520 44 C 540 48, 560 48, 580 44 C 600 38, 620 28, 640 20 C 650 16, 660 14, 660 13 L 660 25 C 650 28, 640 32, 620 40 C 600 50, 580 56, 560 58 C 540 60, 525 58, 520 56 Z" fill="url(#fold5)"/>
+  <path d="M 660 13 C 680 10, 700 12, 720 18 C 740 24, 760 34, 780 40 L 780 52 C 760 46, 740 36, 720 30 C 700 24, 680 22, 660 25 Z" fill="url(#fold6)"/>
+  <path d="M 780 40 C 800 44, 830 44, 860 40 C 890 36, 920 30, 950 26 C 958 25, 960 24, 960 24 L 960 36 C 958 36, 950 38, 920 42 C 890 48, 860 52, 830 54 C 810 56, 790 54, 780 52 Z" fill="url(#fold7)"/>
+  <path d="M 0 48 C 30 46, 60 38, 90 30 C 110 24, 130 20, 140 18 C 160 15, 180 16, 200 22 C 220 28, 240 36, 260 42 C 280 46, 310 48, 330 44 C 350 40, 370 30, 390 22 C 400 18, 420 14, 440 16 C 460 22, 480 28, 500 38 C 520 44, 540 48, 560 48 C 580 44, 600 38, 620 28 C 640 20, 660 14, 680 10 C 700 12, 720 18, 740 24 C 760 34, 780 40, 800 44 C 830 44, 860 40, 890 36 C 920 30, 950 26, 960 24" fill="none" stroke="rgba(255,180,180,0.3)" stroke-width="1.2"/>
+  <path d="M 0 58 C 30 56, 60 50, 90 42 C 110 36, 130 32, 140 30 C 160 27, 180 28, 200 34 C 220 40, 240 48, 260 54 C 270 56, 290 58, 310 58 C 330 56, 350 52, 370 42 C 390 34, 395 30, 400 29 C 420 26, 440 28, 460 34 C 480 40, 500 50, 520 56 C 525 58, 540 60, 560 58 C 580 56, 600 50, 620 40 C 640 32, 650 28, 660 25 C 680 22, 700 24, 720 30 C 740 36, 760 46, 780 52 C 790 54, 810 56, 830 54 C 860 52, 890 48, 920 42 C 950 38, 958 36, 960 36" fill="none" stroke="rgba(80,10,15,0.25)" stroke-width="0.8"/>
+</svg>
